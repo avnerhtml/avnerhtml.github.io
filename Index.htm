@@ -3,18 +3,36 @@
     <head>
         <meta charset="utf-8">
         <title>stt-info</title>
+		 <link rel="icon" type="image/x-icon" href="favicon.ico">
     </head>
     <body>
           <style>
 		  
 		  
+			
+		  
+		  
+		  
+		  
+			th, td {
+					padding-top: 7px;
+					padding-bottom: 5px;
+					padding-left: 7px;
+					padding-right: 15px;
+            }
+	td:nth-child(even),  
+	th:nth-child(even)  
+					{
+					background-color: rgb(173, 216, 230);
+					}	
+
          .center {
-		  display: block;
-		  width: 50%;
-		  display: block;
-		  margin-left: auto;
-		  margin-right: auto;
-		 }
+				  display: block;
+				  width: 50%;
+				  display: block;
+				  margin-left: auto;
+				  margin-right: auto;
+				}
               
         .content {
                   max-width: 700px;
@@ -28,8 +46,9 @@
                   }
           
               body {
-                   background-color: white;
-				   font-family: Arial;
+                   background-image: url('img2.webp');
+				   background-size: 100% 100%;
+				   font-family: courier;
 				   font-size: 13px
               }
               
@@ -38,51 +57,203 @@
 				font-family: Georgia;
 				} 	
               
+		.topnav {
+				 background-color: #ADD8E6;
+				 overflow: hidden;
+				}
+
+	  .topnav a {
+				 float: left;
+				 display: block;
+				 color: white;
+				 text-align: center;
+				 padding: 14px 16px;
+				 text-decoration: none;
+				 font-size: 17px;
+				 }
+
+.topnav a:hover {
+				 background-color: #ADD8E6;
+				 color: black;
+				}
+
+.topnav a.active {
+				  background-color: #ADD8E6;
+				  color: white;
+				 }
+
+.topnav .icon {
+			   display: none;
+			  }
               
           </style>
-      <div class="center">
-	  <h1>St Thomas Information</h1>
-                                 
-       <img src="https://snorkelaroundtheworld.com/wp-content/uploads/2021/03/turtles-at-buck-island-st-thomas.jpg" height="150px" width="60px" class="center">
-         
-        <h2>Diving at Coki Beach</h2>
+	<div style=text-align: left;><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASYAAACsCAMAAADhRvHiAAAB+1BMVEX////21SgdKX1czduzCz/92yk6hBH72Sld0N7/3Sn72imwADI7hhFe0uCxADbQfZKvAC0AAADw0CcxlaDm4uHLsCGAbxbLxsXjxSW2nh7CqCCWmJhPwc8phY//4Sq8ox94aBRhcnQ8oq/bviShjBvdvyStACXpw82chxpqXBOrlBxhVBDTtyPpyib29/qhiQCOexhQRg7boK4sYWjCpgCrkgB5aRTr7O+Jdxc0dHxuYBM2hwDVjZ8bPQm6vMKUfQCipKzR09h/agBZTg92dncAADwAAFopdgAQH3k2exAAUgBHtcK4GUvGyM9xbmJlZGBFPAxHQCGDhpAAAC6wr60AADkAAE8AQAAVYQAoKz62sbAlPhsgRwosYw2VADZ9AC8lUwsAMwAkTlMrYA2EhIAxABR4bTlZVkdbUyxqXSBNTEhFQS9pa3N4fItzbFF7bSpHSlUcGxdIQBtFQzwqJhM3OkIzLQowLywfHAd/eV1rZUxVUT1pXzYAABkSFTGampYbHDAIGGJEYGNxholhaF9AeYEhAAxQAhhURk0uABsvHS8gBSRgACZOLhQ8STcxTSZKUGMOHgXHZ355ABciQkY1Hw/qztdTOgCSABozQS7ASmYzVSVZfoO+kZ8ASlIAERqydYk8FROIDUFgYhFMZlQAJjM0WyNGbWMvQADoU/+DAAAfOElEQVR4nO19iWPb1p0mEeXp8SFkpoJICiTFwyK5CxIAjxEvkSMeImNa0lCkFddiZClWasZOZCV1m1rO4UQZRd5kdzPxzDTdrqdpu7NNZ/tn7nu4CBCQbVmir/BLnNAACTx873d874TNNsYYY4wxxhhjjDHGGGOMMcYYY4wxxhhjjDHGGGOMMcYYY4wxxhhninqtVmsnn3Upnm8ka9dzrMhm02v1Z12UU6B2470bzVp9ZHXdfj+GIEVREMDcWmFUd5GRLFT8nY5/BFeupRACbLZaGhFX9apEkgRILbXP/g4KCpX1TmMpF2Oo7O7ZX30XSQ9AAyTKXLnO9PLtm4jSAVVHwZPMUDZGIxpKNzl7797V6lrlqtHxn1m49eciYWjgKX+2fpes15rvYRuCMkMS6BHQtC4YHgNzhWAkVbqxfhbVXsAeFylRNNTdo3kG11VQ93f4apZBwPgIiD/74JHcZwA1BAgBiqX4vcopr13pMPhibImLujWiQPWMzKmy16gKeiPSWMqun80dDCjsciIFTDejIGJyN09DVPtuVijiyAQFjk3wXlq5rlg7i1LXMjnGgiIIqFh17yxuYEJhn/E2EiKgh++JrSrXaD6p8+EUCoE3jR+FDjMoGE0r14f9U5e43WxkkbliacAk4mjpg1Nf3xIXcdEZbzzDxWiTUUEkphp7lSfw9XoqiC8G3KUEhEw4XSxFVK+7fqrSJit7mZRoIgkCmuUycS9DBcMjER3+rCT+EHR7uh632f0gonJTu+snTR4fZlNZmvzazbMQMJQWANEvn7ys9dqtboix4Ai6i92wj5LOgJtPfoPjsQe0m6EIl+ETLBimaj+GItXG3kkkVfJXlUL7PSwo8b9xRn8x8IQ0FbAZVQUmIxiDAwRATMQzaUHLd2BpFFp/PaIjhUZMKNzNhxgdVSgTg0QnUNmlX+9VHrMIBeKnyU4IQRhMR/TPBT45eRmTlQ9uLmWlmA277IAiGlA+TzfuFZGOu1HoAfxAGYNOJkYVS8S7YW8MAEDjcOVLI+0Mk126+cHjUoXR/jSFo5Oh/mHoZLEj2V7/qJQTVWOBbBxADBoBxlfMNKKRIdkEY6PJdJU4IvpPfy9MCOv1ZDKlNBdnPTHjGWxvmCpXoVB4nFqrv08NpVCUf+zaJhTFc6yBCMQzXMjnLfLdUkIAaOjiWMb8ZkSt+PZvqtksm4gAgxDBhCAm4hZR2j0UqmSrWlrKl/jGxVvrD49Y9Zw5cz9CiNf9e7c+uphpNPjSEEUKTazX64tAwxlsXYiNUUykent0/Vr1ygc5bMGZYohFRtGGP4v70EJ80tglMZG4cEu3HpYFm6afPkKItz+qChSSYaF6kbsEsKDTM4SrjXJz2LqEX31w4ox8MtRTCLevI4lwtyFxBQYFgZF937BtGwrOlI5XdPWUqSmEVdrxrYnCrSq0IEcFjaIZQ2Vhi3dHS12ec1MIBG+Ngho9krzcoQIQFBL5TCYcdbOkOmkSLWkuw7Hk81CZ1b+j7J3j7ONT8yMzbPDuccWodEVNnwyTSwJmtJtA0mcaWzKMhNI8ZsjHKGWLjaIxZ8R6FgzKA2jRFw03uryH8/rcbre34Z7KxDlfzGDsaa/2E2bf2tg7ooklcL1WXTquEEtq1oWUl9X9CCEK197HpZKXFRkx4g5xeVK6hECBQe0Ffz/izlGCXcEgDAhZkGLd3kQ0mghRQjHIuBP5RkLHkxjtsupfYdeqiB3RIqp9YqtPWRehVlWLgELdhE6UMplMPO0VBQ/wekqlMKk8FjfhgCFoBpdqI6RHw94SZW5PQhmowajM6Q1D7GrWwtwxX/GGBUtSm846ObbzKksg4RkqCk2MBvEiLaUO2pRUcOOzURstPyrqu+EshcztX1K7QxpULVyM17zE3MvzKWMVi0H1uIx9Ufv64LLG23m9FleENNYG2dLeU/A4BYXaXpzD+pse7soB1jRRyCMMmBx6/OSaRZYjfLZtrrpFKKtlta67EmvxQ/xTd8JYLBLWRV/Rl+nUnh5JEjpYvHkafNon6hUUiMcsszQU1G4kCuZMfXj1tCVP7xdz2VzJP/xgn2l3YKyNiUJhYXAVInKFaClTikZG0Pf9KOA6hYCWCoBTGwsUBcXsCxYdYYYnEk1eZ00TRUIvoC4O0VTIa3lT4KxkGkQJ+StEDTBCIpzBlclglYX4p0WOrrRyTsYPArFwCzcanqg7xuCE7Cn5LGINbGg0weEm53r1eJ1I3Ri+sauq2WUiZKG+GR8fDSLSgAql4zjxhVhK0QLMaNq6D0dnkIiJXVFsKOqJ8w0+nilODbfusGXwg4o3avH23ZilLck/Mzd/dTRFzfdBGX4qXszHG414MeFmKJ3WBc/A53Bx80OBgUQB8gRAyJufm25oxwwaONnMPaTNQYEPTfctLGlOZ0ET9BWBKIoMBdGwGmA6T48cHWo56wAK8hb5B2q5B4fwuqaHXI0sM/RFpO/ANlvATOE9TVv4BMoE1LAsFLHnp5zkVKxXLUZZSCUnLPgbdHKWkp
+	03mwpRlw4q+q4BiKhQ5o2SLgvApZrujq7+W59XmozpmnqaMhYHsTVT/OimJTwClYupmChSaEjtwnja3F2vgbll+/yVC292ZpSL1NSnxhy5PV+cv/DKhcuZkCb0UU59vHr/rTcuXLjgb6eO7YbApsgblaXS+GVTu2c75+FkaK83bzf4cNorsAzWBIAmAEG3NMRjCVSqu9545ZVXLrxx+0AqeZ9S5V/+y8sXXpFw4fyXS25G0hgwuIa/5LrU+RJzRE51bDePY0kMhUsRJDebcDEQYFghkS51b9x44lHEM0O9SotCggvzOLl40hxG2hOPe3lzeJWqu7puOzivcPHz2/1NVx4yYsyb/vWb5xWOFKYuf5GpeoVYTOD9nbd+rp28cNtW5y36/0gNdKOZsNRV4QsluCIuEY//GhNNmuKZADfvJdPGj8vGBLfPLVlW2MKaaCrH1/APND4uXLj8xhdffvnzy+cvGDhSz56/fPny+X8ynnszaWt3s+YJDaTtwiDR7Y1yXDThdcdEBpJwMJo5QCdH4aJOTkKlXxXkLXqQUrvSuPDnZkZOgJ+7yPzDTtrCmkqMXAAaDnp3UfYMp7acCoWb5gYKDHHD6Q4s1eSvf3Eqmi7Lsb9+0WSuoGvKsBCkRiq9k34NBxhqWrJt+g1Qjq+XBCj17ugUTykx1HvAKup75o1T0XT+knyZ+pIx4QEY9xnyLWlHZUfduTQzPztAQKOpoD+8eqgdrt0IV6NRHBFYIoExGDGzb8jNMKuU+NLlU9F04UC+TLJhDE/pqVBQHmeh8c3ZiDubW/qsZmzrVHbPDXA4YzsDzAScEwqch7rD0+ph+8ShvhDJwh2vF2e5UpwniHu8oajBnJTGQnL3n05F0yu/koX5sDV1QyV817h895KH637QNsvu/qpThf3cWbCE/UvjafWS7vDBql05PD9UjORHsaAyKIewhkIJo9KjUzX8pUqGPx1NF+Jhch3brjFHoC6+N8UwjDTahIIp69GT5qxa9fNnNm9UuaR9Wq9gC9N25aiuueWSGdtLUzpPiMWRQeCAaqf5WQp5LHL/SWjig7nP1mu7WWMdiPouOiDyEpW2GZNjnZPr3j53Ji4nPXtAsZtZvTVtzpo90Vafkueit3erLKWOZIBEwyvo8xFNiQCi/GlpwuTHIoYGHSN61QkoZJhZrHbkip2ZMvndV06Lqj8dFOYnnHo3/krlzjBJ/6h1RQkZtX7GE/XFpEAufNyIDkuFM6Bp6IoU3J8qknFySDERb7p4Vx35Pgj8YHqmEdB0sKrQtDA4llQiljNguM9mq7yxqXz2Z93RYok0XooRJmyWT6ekqWSiSfSIngYO3OSOofe0mNOfnjWvtxgBTYWA3XTNGSWCO42Jot5zOFZq8udkA5GGpzRkHswMj8GB9ClpKg63U1DRTUsjg7ixi1TZgaP1nHPaHIBGQJPmdbMH2iH/hOmQdLg1OelYwfZECtYOq0+CEnF+qFuIrp6SpuhQPwod2w+rrQAoqutQkoerdueCOZuNgqZLZtO5Z+lztsXylmOyfKSMZ1d4kfSxohjPIV/XjZuguqdKnD8VTecNE6FoQPu6lK8rSP0nSPhIidmuw1n7hJU0GgVNyQX7UHCqz1n63EzPQWjq2x5sSBVY2CulcqlSnAW4gosZ3qOLtyFC04ULart/8OmVwSf9x2Ga9D00kWgxkyZTOPLxbETI8et+JZHMY/VrXzVa/Mho0lSGppEULWU3KE4cB8qORUKTq9dTvpmst+s3gDxHOsFndMMw7v/29ddfN5vN/rsSvtnb2/vmvxP8j9u3b7/1PyW8hfGFjC/xnzfJPwq+0PW0g3S3QUsRHaXW/bVK0iUrgJkFUm57wIKKkdC0qXidFol+UH3OKEhUmnAkvzI4I41RIaGbCCZ03eOxb1999b+Q0//4KsbP/h5/+vvX8KfX/w5/+q8/IwdfJadffR1/eO0f1IOvKae/1ikxkEHurg9R6mqm5HyAGPOBnI31CXq0NCUXnAYfc6kSfMjridMtO8p+TFP5ihY3/QLWmZ44Q1OQT9AqUfS7mKakStNrljSR09KH1yWa9Kf/WTNLAMNeHJCKvEhTqEFuuGuftxEhoGQeq56mkdCkep1aMZdUn1M00mZdmab7XXl72+GotbEumNTGw5Jd1idXNkVHGyVlpi/43aloUtUl9BUz0rVRrBtFWdKthBu2mKbOqtNYSAP6I6FJ8Tq7okDOKcYUUCymPrWysXH/yO+qr2Cva13CNC06elrxCv+ypLbqUDikjI+j+GloeluZbwAj8YbagESJKdLQnQk4nfdsJMUphbRiYjQ02RSvk/Wspje/Uk/7Ww5Hudxa+fH28tZkq4Jp2t4u38cnklIx1tVmPIh7g9EiVgmAorm3dbHpcWiST/+bdPqqF5IeN5rqMuK+Kl2DJVK4eSduaB5OqB0YhkbnqGlq6oOTals6c/6uPDm5POko9/51ebHcdPUcyzvlK7hm35HWea0raQnwIUQhrstF8xC6r57QmvQ0fctSUPC6o90IhBpPKI7PfY9ZWp13Ou1qo9NypdmIaJqRhZIcnL5SzPneQN1ib1vecWAJPvmvO1utbzBN11YqNv8Klprk7FJQYqkRIusKfZzb7fEhHMMfx5r+0ZKmf8YNID7BhUiI0niCu6QnyW6fmwoEpufklugxXSUjoknxOvmmigcOfA7jiGgBiaed7WX84Upr3VbDkfy+dHZ9CTfdAS8n7aiPhlQ36vvNE9P0v34WZmMeDtGgQVMyT7gdx3TrtkukOu3OZsG1iZ0PW9SgpZL061rAo6KpOQhOimUZ66nWciwvTjoUXFt0PLDZiCKXabLV925e3Pu1bFPS8D7aD3nefmKafuvlcF7D1/JIS7SB+3M+ntkr2FxyDZJSNomsww06VcP0F77XFXdUNKleh+/aV2LjPf151ztlzNPite3t5UlsU47WJmFuu6Xvw6gsBSEEgtS2B3kx8u0T0/Q1E/RIaSFCemggdVG5wy+cauNgBku72eahU26pzHQWJgz9BKOiSfE0EpzmFdlmjI2u3V7Z4VjexsIJ8zTZaxd2yte2NwyN81ojG8l+LM30odNC8HdPTNPvAeIlGY4+zlIwu688bEcJmnObtkMcyedtm3OEh83Dabtz1qAyR0ZTXw1OrmldmNKjfaPX67V6mC1iT1sr5e2tnt84EbVQW6/Y9nJBGiLOjdL/+wlpaqcg4qVpJqVKbW9PHV/qK20qXLSDVRzJcYPz8J7tYH7OaR8eGxgZTYrXzfoPZi18DqN55N9rrq9X6t+1SChf3lq81moWpmrmS613q7nqxwLNfv0ENP07uRVDIT6VFVL7+okB2lgZVsELTlkwbU4trDrtsoHpMTKaVK87p3bSmXpOMT2tXmvDb+u0JL9zlHdt9d6K1eYE7Uq90IXB35PPJ6cpGQ6iyF67ZjTVghoM8MPvEvVdt7maCxNO2cKGWp+jo6mvKKeA4nOmmZ7JK1Kmay1WjsoSSw+Stkstx8Yxs/hcu/HfEb89OU2XMtWweU7Aod1uV5ueJC40Z84FJtTRjoUhOkZHk0vyOvucHABMPofRfmdx2YGp6i1K0Ynw08dC6uj4a5K+2JPR9Cqm6U7NZaa+Obc6HViQtRJOeM6FX8ypQhynvmHTHx1Nqqqc0ASUCRuOHUyUwyH5XJlkQkzYseaEM99U/QloaudSZkeuNw8269jv7KsLRC7ZZxecdq2w5nbdCGny61iyvn6TiPDFneVliaYm9qvW5JZj5bii1FLU7kNpIl8y03Tj2DldOM04AwcBqfF7LjCrVqszYGqwjJAmtTNOurN5hBCjsIGl0+TytWXJnFpXdhykpbdhHtiQ0K4igJ/3pDS1c/Rx+zo17cRwduXE5urPq5Zv7pgbIU3qcMqxPjfTrm21ypgpR1lOddjjtrcnj5unRgYkwUcnpukG2fsiYrm5Dzaj2QNXQBEDB0q1Wk2nGCVNB4/wuU7v2oO9/o9/2Ng4+oPC0/Ji+UrytmXVV8gsCRiq/PvJaPpWmuVluREP9jl7oED0N+mK68/heD5rlkwSRknTwOusfa5fdpR3ZJ3wnZTrthd3Wg8KMxuWmwHeRaRVhu6e0Jp40iKM+TwWniz53OacXfKyJmbJOf293SSZ5KKOkCZ1QGVocoqGzdbyZHmlWatsXlEEpqPVsdmuqN0EBtRiIR/ARLHvnoimd0kPH4PCVsu+ic/1SfzGXtbBusUZuHQwa5JMEkZK04HlVCcNyY3lxe1yGUtxWRJgnjBBWJNb5Dp/Ltjwxt2QAtGrJ6DpapQYkyeaELJrw/ZEfG76m1mpg4B0hTsDm/iY1WDmiGlSvc7a58g4HdED29vXFJYmyzds/d7ycqtiG3qmpoAivLyFHMqcgKaMNDwAhFIjyNwdCnnE534hxe+kxNLCJum2t+wKHy1N2siBZQ1JgoAYU69VVszJ0XvQK29hmi4Zl2c1YzTmR5ksIb772DS9q4w9QORmIAwb20ukcH92kpBNxsSdC5JYumO9em6kNPVVp7t3jLDePOoTrB3dX1G8Dic7IjD7K/p0sy5tPhVxyxv30O5vH0WTNOr7D6996yO/YykI3dKSvZK+GJK2xPHbeYfw5ZyX+TmmoIfDw/1niJmBvjx2/qu69sv1nWJP1xYnJ2/Yfizf140vpKTxxzhwCz4GPzPirj4WTb9NI4qmYAn5YFoaFGX0kgz73ASJ3/ckk59/qJmo9T1hH55gewbALSYFTuvAiPHOyv0jf6Ve3/yDQhNW5N8Vkjvl1iA5fkoCDPR6wlHKA2GiCFH4t49B0x+7QSjkI8E88pWiHqmnOKUzhgWncwE//SwZKpg4fChLm3Pqkzidh8e0EZ4Ynem5Af50jLUekehEwpMaxR2OPyRtm71rkz+qX6nIu/
+	jxXopGeR9ZFIDEqT/aHkVToTMTQlDkPDyEtDsjLeGHn2o3nplzrt4jYgCbyOzDn73+54AOd86YpxkDjqmuzR7Ocw61l0DKdh1bfaO8ONknO1KRTpX35a0wyB/aQ2ZJMNV+oVN4BE3J3SRZgg9pxkv4gQwbowCI1NQbN+3OeTuO3wHno1iyFQouPZ7JBu6L5WtYE1zb2ZpUtdN2Z6e8fA1rp/5Kq9cmU1c5jzoxmcbCKdsskFUHhYfTtEuepnCd0RativueopepqtW14Jwm8Zt0pTybRc8nQ2WlXF7GwApc5YkMTfX8+Aw+VitkuBALBzN7Ya4m/S7ZKTxEEPzdrlznyTVtXhMoMow7HVY4mZkj8ds+jV3veVkS9nDMHG2trKzs3O8f3Fd5Wt5qNaVZPZMt/xpZ5yYMdi+B6lMl7/yf14+j6W1tAnxhsJNKLI0grS4CbuL4LaW6uReDJYJCIZm0Jds3BmG8V7dVepOLjsnPyb6ZwMOQ0SOJpUGyKi5dPYamq6WclrfXJCXA0DREHmJZQI7iC7Mkfi/Mzp1+D9+ngmShUK9s+o/ub8gDdgqO2v+J5bhjRdoSjPFANpFukDU/YE375fVg+mtLmr79SzClxdl6FWAxkfEUE4KbTHqGQs1GfI5kuNXA9HFC5XmDa2oFy4HJMubo2pbGE7Ynx9a2Y0VarAlDmSInsHFIdsgfyLs+lUj8x9tmmt718cH84AZkH1eQFxkhkY5LMYrMt/xqjsTvhYBlz8VzCX/P4djZ2tlZ3NouT7ZUkYn/3mttqEtaAaBRXCS7ndUGP6znOIbZvzpE0/+dcgczSO9KHRZSTByqbkuBX9aT3887nc65v1rNH3xe0ZQmEyyXy737fb8cxh2TK3/7S5rT7UcHOB+OLkqWI0i2/fEoi/K5b5I6mpIfpHxulKk29VvWdrIISFuwq1kg9Uv+7o/zgb+e2aqvp4LKdyvb1/7zu36bbFYvdWOuhAUUHGx7Q1YepINU9q42QJL0h7NMMBINeoJLfE2jqfL+EpNgQ1yQiVR1r6ep5WMo4Rss0yMbSyLEFp+PNfSPD9fUg921taOjH1ekqWEriSDFhbXKp1KffHLz+vX+oNu/5hERYhJhPsEHw8Hc7T++LsmAW7lggs2EpxJkN09YHXRYJmtr1+988mFOWwiDvCUvCr7/LJ71NOi3yg7cuisvbzsmW62/IJGPBL1xaYtrkGsOt8qbZBN9LuwGKFbkSoBN5P7j6qtvvxvNuVGxJEQibi5TZGjADndY1tdCsqrgOISiCZR74d6HtNtaXsTYmdzq+9fTwTyDuIT81iKPyTU6LE0LPNnFgOaKQppjuKAnsc9xohBiw+lwiEa0tIwAUp8O/7Qmr/BBPg9CYYatPZVnO0s0V4g59a6Q3SfSVBEHI0RDmgJLphpfj0Hg9eBAQ7O8O8h4ovF9kA8ixDHpxr5HQL64F+HwE44iyKwN/3iN7FxD5oSHaCGBRr997JnD5T/6sSln6OtiFHExpvG3NJU1jUO2cwB4yV7sKFRikLvExDxsqYQoVCqlvV4QLeETcQZSyJMAcLCcUEby8P/9+H5KBBQdR5QHvSAS/Bj4IxxKM+mWo/U3kznY7iIoeAhLaRxgEmnExtl4lI8yJS+V9nKhoNgQAdOIYZ4aEYgMbx5wzcw7Z6cXVhfyFOJY6Am+2DQlw0tBTuRIr4GpYVrJQkg25gP5ECLxi2lQcYg4T9rtcQc5wSMAKoNdjif7+XYBxahMuJo/LATmnHN/np9zOmcfUD4fsz/CN5A9FbiaqVBWnGrhNsswT2uA5gRsKiWc59JeRPMMFwOJEA5kCLtbHPEiZBqIAg2GohMJCJTh3ksL0qYUgb+SiZUTswvvsbn3X4IXJLr6e+F+syWPA+vxCaJIIPK4acR5EUq7cYihpO4o6PYCIQozEBLJTXYWRV1Iy41AMvQ9YZ+WZp/ifwKzq0tTz3I/tLNFh/BkfG3eOuP1QWwngA7hVOZOBxOC1h3lAaCEImFMngBhKAHpaAiRPdalJby4pTsnzz5ddU6vWq/geVEh8fTA4B3Xw5ASsfmwxIR4iMKYDXnNHQgD6HWjaAiSLaNRnMIt3iUyz3teomdVnkhk/4XdvjrnDLwELjcA4am8aPCPkrS3GuLJol0BimkaKEunaY6lGA9ADQYKHKAiHI3IrpXyskv77PfKVDgyBeWe03J14YsLMhu6/I4+JX2CxCKACR+kWA/C5gOhsv8q+QxKgBJLCMUxkSUI0mRnAcKSc/XPyuCqNM/53pntMPS8gPDkWNFNeWrn3D4IMR0oL1J0kaEYdbtsHKMgeQEBMbI8giFf8MOZqenVWbvdOb0wr0zAJgO4djKW+eweaSTYJTz1OjXtBW2VLkt7iTGlsZrGdLHqztbYAakYBynII+QRKVgK121J18zmJf8PgTl5/vWqNBTuxP/96qE3fQGBeXJs7zh6G6pUrLAoT1b7sBSmiqa0cRemiPnKkwWvxJwAGmiuzVl5TYFzXpkK8LLFJgLME5lh72gpPNVTQRKOwoBoJQh92iZ6mCYgba0TBijPMANP3VxYlSfzSwGKDM9ZbITywmO3tUWWI2izVPpLOAr5vFBKbtCrve7VA6QjOHpjV1zSvSJt80+yGJhXw/jLFsFl3HgH6yfdKo1CGoG0SEkRHEbVN9SRlIcDNw5OCYEW13X24peMSRID8ipM69mgLzxu94ytu0oVkTcfA+J4UfXdbTTZ2ogEdOj2MZ/pvl1Qpu3Nq/8b3vrnpcGDoVnQ9T55LQIJ2pBTaQLSDlDEpCK7hq/L07iccoAiw+IvV1vloVjD1hTDpiNFowFNEP8HGV++5pIWqyliYGIW/89y1cPLCdcSogUljOtoArjpO/SOn3NS+FbEABGYI5lD+byiHWZTgpmmYlbeCVTDzLTTaZ+duyeLgdWAtPr5J4RC7QOWMtH04fB41eFc4Af/zOGE5HqyTb3YvbsnhwdhmvQhHJneiuG6VE9K8Wl6VhGYZ7gZ6guCdgqhqmZNnqB+moEBB7POCbI+fF7qoHsJJfjDUe/31VcpQvHWL69bLpyzkTA+/ZV/1TndOWYvwp8A+tKLjiA89qWZ2Of+6neRhZDnMF/DOwH+ZNBPUQgIw2t39JB3adv8k4tsfPeySvBHot7/cO1xTISoyvoxq5zGMOLST0eCnwo/uTw3xhhjjDHGGGOMMcYYY4wxxhhjjDHGGGOMMcYYY4zx/OL/Ay5ZTWgsFvGWAAAAAElFTkSuQmCC" style="max-width: 120px;background-position: top left;">	  
+      
+	  
+	  <div class="center">
+	 <div class="row"> 
+	    <table>
+			<thead>
+				<tr>
+		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="topnav" id="myTopnav">
+  <a href="#Attractions" class="active">Attracions</a>
+  <a href="#Restaurants">Restaurants</a>
+  <a href="#Rentals">Rentals</a>
+  <a href="#Hotels">Hotels</a>
+  <a href="#Shopping">Shopping</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+		
+		
+       </tr>
+		  </table>
+				</div>      
+    <a class="weatherwidget-io" href="https://forecast7.com/en/18d34n64d93/charlotte-amalie/" data-label_1="CHARLOTTE AMALIE" data-label_2="WEATHER" data-font="Courier New" data-icons="Climacons Animated" data-theme="retro-sky" >CHARLOTTE AMALIE WEATHER</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>  
+        <a href="amartin@student.antilles.vi">Send email</a>
+        
+		<h2 id="Attractions">Attractions</h2>
+
+ 
+ <table>
+ 
+<ul>
+
+ <tr>
+    <th><a href="https://magensbayauthority.org/"><li>Magens Bay Beach</li></a></th> 
+    <th>Located on the north end of St. Thomas, U.S. Virgin Islands, Magens Bay Park is a tropical paradise offering stunning beaches, gorgeous native trees and flowers, and unmatched recreational activities</th>
+    <th><img align="right" src="https://tinyurl.com/5n8hn3nv" height="50px" width="100px"></th>
+  </tr>
+  <tr>
+    <td><a href="https://ziplinestthomas.com/"><li>Tree Limin' Extreme Ziplines</li></a></td>
+    <td>This exhilarating zipline course is situated high in the rainforest of St. Peter Mountain, where you will catch breathtaking views of Magen’s Bay.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><a href="https://www.tripadvisor.com/Attraction_Review-g147404-d7701018-Reviews-Phantasea_Tropical_Botanical_Garden-St_Thomas_U_S_Virgin_Islands.html"><li>Phantasea Tropical Botanical Garden</li></a></td>
+    <td>An absolutely gorgeous wildlife sanctuary with knowledgable and friendly staff. Located North-Side on the way to Mountain Top.</td>
+    <td><img align="right" src="https://tinyurl.com/yst485s2" height="50px" width="100px"></td>
+  </tr>
+</table>
+ 
+ </ul>
+ 
+ 
+ 
+ 
+ 
+ 
+ <h2 id="Restaurants">Restaurants</h2>
+ 
+		 <table>
+  <tr>
+    <th><a href="a href="https://www.primeusvi.com/"><li>Prime at Paradise Point</li></a><li></li></a></th>
+    <th>Prime at Paradise Point is driven by providing delicious traditional meals using the freshest, highest quality ingredients available locally and globally.</th>
+    <th><img align="right" src="https://tinyurl.com/bdz44b3y" height="50px" width="100px"></th>
+  </tr>
+  <tr>
+    <td><a href="a href="https://www.fishbarvi.com/"><li>Fish Bar</li></a></td>
+    <td>Located on Northside right above Hull Bay Fishbar focuses on providing a fresh catch.</td>
+    <td><img align="right" src="https://tinyurl.com/te25m9wh" height="50px" width="100px"</td>
+  </tr>
+  <tr>
+    <td><a href="a href="https://www.rawvi.com/"><li>Raw Sushi</li></a></td>
+    <td>Raw's team of sushi chefs have created a menu of both traditional sushi standards and unique specialty rolls that celebrate the diverse cultures of the Caribbean.</td>
+    <td><img align="right" src="https://www.rawvi.com/wp-content/uploads/2021/05/cropped-unnamed.png" height="50px" width="100px"</td>
+  </tr>
+</table>
 
         <p>
-            The island is serviced by the <a href="https://en.wikipedia.org/wiki/Cyril_E._King_Airport">Cyril E. King International Airport</a> and the <a href="https://en.wikipedia.org/wiki/Charlotte_Amalie_Harbor_Seaplane_Base">Charlotte Amalie Harbor</a>
-            Seaplane Base.<br>
-			<br>
-Passenger and limited car-ferry services to neighboring islands such as Water Island, Saint John,
-            Saint Croix, and the British Virgin Islands run regularly out of the Red Hook Terminal, Charlotte Amalie,
-            and Crown Bay Marina.<br>
-			<br>
-The United States Virgin Islands is the only place under United States jurisdiction where the rule of
-            the road is to <span style="color: red">drive on the left.</span> This was inherited from what was the then-current Danish practice at
-            the time of the American acquisition in 1917. However, because the islands are a <strong>U.S. territory</strong>,
-            most cars are imported from the mainland United States and therefore the steering column is located 
-            on the left side of the vehicle.
+            
 
         </p>
-		
+		<h2 id="Rentals">Rentals</h2>
+		  
 
-       <h3>Schools</h3>
-	   _________________________________________________________________________________
-	  
-	   <p>St. Thomas-St. John School District operates public schools on Saint Thomas.
-</p>
-		<p>Private schools
-		</p>
-		<ul>
-		<li><a href="https://www.antilles.vi/">Antilles School</li>
-		<li><a href="https://www.vimsia.org/">Virgin Islands Montessori School & Peter Gruber International Academy</a>
-</li>
-		</ul>
-		<p>Colleges and universities:
-		</p>
-		<ul>
-		<li><a href="https://www.uvi.edu/index.html">University of the Virgin Islands</li>
-		</ul>
+
+		 <table>
+  <tr>
+    <th><a href="a href="https://www.economyrentacar.com/vehicles/st-tomas-car-rental#ContentBody_pnlVehInfo"><li>Economy Rent a Car</li></a><li></li></a></th>
+    <th>Located in Nisky Center, a great place to rent a cheap island vehicle.</th>
+    <th><img align="right" src="https://www.economyrentacar.com/images/logo.svg" height="50px" width="100px"></th>
+  </tr>
+  <tr>
+    <td><a href="a href="https://viecotours.com/"><li>USVI Eco Tours</li></a></td>
+    <td>Enjoy the best views of the islands and its’ turquoise waters on a kayak or powerboat trip. You can even rent kayaks or stand up paddle boards and explore the lagoon on your own. </td>
+    <td><img align="right" src="https://fh-sites.imgix.net/sites/3785/2021/11/10205809/newLogo.png?auto=compress%2Cformat&h=120&fit=max" height="50px" width="100px"</td>
+  </tr>
+  <tr>
+    <td><a href="a href="https://www.tripadvisor.com/Attraction_Review-g147404-d4022912-Reviews-Coastal_Watersports-St_Thomas_U_S_Virgin_Islands.html"><li>Coastal Watersports VI</li></a></td>
+    <td>The longest running Wave Runner rental company in St. Thomas, United States Virgin Islands. Come explore the beatiful waters with their top of the line jetski fleet.</td>
+    <td><img align="right" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/27/89/c5/88/coastal-water-sports.jpg?w=2400&h=-1&s=1" height="50px" width="100px"></td>
+  </tr>
+</table>
+
+
+
 		
-	   
-     </div>
+		<h2 id="Hotels">Hotels</h2>
+		
+	<table>
+		<tr>
+			<th><a href="a href="https://www.marriott.com/en-us/hotels/sttwi-the-westin-beach-resort-and-spa-at-frenchmans-reef/overview/"><li>The Westin at Frenchmans Reef.</li></a><li></li></a></th>
+			<th>Against a stunning backdrop of blue, you will be immersed in a dreamy, world-class resort experience. One that draws inspiration from the abundance and diversity of the natural elements and life that surrounds you. </th>
+			<th><img align="right" src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/25/0e/75/23/the-westin-beach-resort.jpg?w=700&h=-1&s=1" height="50px" width="100px"></th>
+		</tr>
+		 <tr>
+    <td><a href="a href="https://www.ritzcarlton.com/en/hotels/sttrz-the-ritz-carlton-st-thomas/overview/"><li>Ritz-Carlton St. Thomas</li></a></td>
+    <td>A beautiful 30-acre, oceanfront luxury hotel, The Ritz-Carlton, St. Thomas is a Caribbean marvel styled after traditional island architecture, but richly updated with all of the contemporary comforts for which the resorts of The Ritz-Carlton are known.</td>
+    <td><img align="right" src="https://cache.marriott.com/content/dam/marriott-digital/rz/global-property-shared/en_us/logo/assets/rz_logo_L.png" height="50px" width="100px"</td>
+  </tr>
+  <tr>
+    <td><a href="a href="https://www.fbrvi.com/"><li>Flamboyan on the Bay</li></a></td>
+    <td><img align="right" src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/83363650.jpg?k=8f3ce02c27ba0f68b5dc8660652d2202e9c83fd3e059fd3fbbdad8bd1cdbc7de&o=&hp=1" height="50px" width="100px"></td>
+    <td><img align="right" src="https://www.fbrvi.com/wp-content/uploads/2019/08/Flamboyan-primary-logo-transparent.png" height="50px" width="100px"></td>
+  </tr>
+</table>
+		
+		
+		
+		
+		
+		
+		
+		<h2 id="Shopping">Shopping</h2>
+		
+		
+		
+		
+		<table>
+		<tr>
+			<th><a href="a href="https://www.mangotangoart.com/"><li>Mango Tango Art Gallery </li></a><li></li></a></th>
+			<th>Mango Tango art gallery was founded in 1988 by husband and wife team Jane Coombs and Smokey Pratt. with beautiful locally made artwork available for purchase.</th>
+			<th><img align="right" src="https://www.mangotangoart.com/wp-content/uploads/2020/06/mangotango-web.png" height="50px" width="100px"></th>
+		</tr>
+		 <tr>
+    <td><a href="a href="https://www.mountaintopvi.com/"><li>Mountain Top Vi</li></a></td>
+    <td>Home of the famous Banana Daquiri. with the largest duty free gift shop in St. Thomas.</td>
+    <td><img align="right" src="https://img1.10bestmedia.com/Images/Photos/187753/p-DSC-0005_55_660x440_201404231255.JPG" height="50px" width="100px"</td>
+  </tr>
+  <tr>
+    <td><li>Vendor’s Plaza</li></a></td>
+    <td>Checkout the lively booths at Vendor's Plaza. where you’ll find local vendors selling an array of goods. </td>
+    <td><img align="right" src="https://stthomassource.com/wp-content/uploads/sites/2/2023/04/IMG_8756.png" height="50px" width="100px"></td>
+  </tr>
+</table>
+		
+		
+		
+		
+     </div>   
+	       
     </body>
 </html>
