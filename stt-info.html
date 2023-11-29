@@ -254,7 +254,22 @@
   <source src="movie.ogg" type="video/ogg">
 Your browser does not support the video tag.
 </video>
-		
+		<script>
+const x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude +
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
 		
 		<iframe class='ThrasherVideo videoMain' width='610' height='343' frameborder='0' style='margin:0px;padding:0px;border:0px;' src='https://www.thrashermagazine.com/Embed.php?jwId=KLVPcHOs&Remote=1&Width=610;start=2' autoplay muted>
 			
